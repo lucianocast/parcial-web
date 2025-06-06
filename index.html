@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dulce Estación - Pastelería Artesanal</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script defer src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header id="main-header">
+    <h1>Dulce Estación</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>Delicias que endulzan tu día</h2>
+      <p>En Dulce Estación elaboramos pastelería casera con ingredientes frescos y mucho amor.❤🥧🎂</p>
+      <p>No dudes en realizar cualquier consulta, en la sección de abajo podes contactarte con nosotros! 😊</p>
+    </section>
+
+    <section id="productos">
+      <h2>Nuestras Especialidades</h2>
+      <ul>
+        <li>Tortas personalizadas</li>
+        <li>Cheesecakes frutales</li>
+        <li>Macarons artesanales</li>
+        <li>Box de desayuno</li>
+      </ul>
+      <div class="galeria-productos">
+        <img src="imagenes/torta1.jpg" alt="Torta personalizada" class="producto-img">
+        <img src="imagenes/cheesecake.jpg" alt="Cheesecake frutal" class="producto-img">
+        <img src="imagenes/macarons.jpg" alt="Macarons artesanales" class="producto-img">
+        <img src="imagenes/desayuno-box.jpg" alt="Box de desayuno" class="producto-img">
+      </div>
+      
+
+      <div id="simulador-descuento">
+        <h3>Simulá tu descuento</h3>
+        <p>Precio original: $<span id="precio-original">8000</span></p>
+        <label for="descuento">Descuento %:</label>
+        <input type="number" id="descuento" min="0" max="100">
+        <p>Precio final: $<span id="precio-final">8000</span></p>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Hacé tu pedido o consultanos</h2>
+      <form id="formulario-contacto" action="formulario.php" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div id="mensaje-respuesta"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dulce Estación - Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
